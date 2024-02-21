@@ -1,0 +1,239 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+:root {
+  --primary-100: #ff6600;
+  --primary-200: #ff983f;
+  --primary-300: #ffffa1;
+  --accent-100: #00bfff;
+  --accent-200: #00619a;
+  --text-100: #ffffff;
+  --text-200: #e0e0e0;
+  --bg-100: #1f1f1f;
+  --bg-200: #2e2e2e;
+  --bg-300: #464646;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: 0.3s;
+  background-color: var(--bg-100);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+}
+
+/* start header  */
+.header-area {
+  position: relative;
+  z-index: 2;
+  background-color: var();
+}
+
+.header-area .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-200);
+}
+
+.header-area .logo {
+  color: var(--primary-200);
+}
+
+.header-area .container .search-bar input {
+  outline: none;
+  border: none;
+  height: 35px;
+  width: 250px;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+.header-area .container .search-bar button {
+  outline: none;
+  height: 35px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  width: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .header-area .container .search-bar button {
+    display: none;
+  }
+  .header-area .container .search-bar input {
+    display: none;
+  }
+}
+.header-area .container .header-links .links {
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+  list-style: none;
+  color: var(--text-100);
+}
+.header-area .container .header-links .links li a {
+  color: var(--text-100);
+  transition: 0.3s;
+  font-size: 18px;
+}
+.header-area .container .header-links .links li a:hover {
+  color: var(--primary-200);
+}
+/* end header  */
+
+.inputs{
+  position: relative;
+}
+.inputs .container form{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  
+}
+.inputs .container input{
+  background-color: var(--bg-200);
+  outline: none;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  border-radius: .25em;
+  color: var(--text-100);
+  height: 3rem;
+}
+
+
+select {
+  appearance: none;
+  outline: 10px red;
+  border: 0;
+  box-shadow: none;
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: var(--bg-200);
+  background-image: none;
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: var(--primary-100);
+}
+.submit{
+  border: none;
+  background-color: var(--primary-100);
+  border-radius: 0.25rem;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.submit:hover{
+  background-color: var(--primary-200);
+}
+table,
+th,
+td {
+  border-collapse: collapse;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: var(--text-100);
+}
+table tbody select {
+  appearance: none;
+  outline: 10px red;
+  border: 0;
+  box-shadow: none;
+  flex: 1;
+  color: #fff;
+  background-color: var(--bg-300);
+  background-image: none;
+  cursor: pointer;
+  padding-left: 10px;
+
+}
+table tbody select::-ms-expand {
+  display: none;
+}
+table tbody  .select {
+  position: relative;
+  display: flex;
+  height: 25px;
+  width: 50px;
+  border-radius: .25em;
+  overflow: hidden;
+}
+/* Arrow */
+table tbody .select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+table tbody .select:hover::after {
+  color: var(--primary-100);
+}
